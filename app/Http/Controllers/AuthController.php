@@ -22,7 +22,7 @@ class AuthController extends Controller
             return redirect()->intended('/dashboard'); // Redirecionar para o dashboard após o login
         }
 
-        return back()->withErrors(['message' => 'Credenciais inválidas.']);
+        return back()->withErrors(['message' => 'Usuario e/ou senha inválidos.']);
     }
 
     public function showRegistrationForm()
