@@ -10,3 +10,6 @@ Route::post('/register', [AuthController::class, 'register']);
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware('auth');
+Route::get('/', function () {
+    return redirect('/login');
+});
