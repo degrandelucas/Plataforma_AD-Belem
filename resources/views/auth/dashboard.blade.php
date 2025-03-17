@@ -11,7 +11,7 @@
                 <header class="d-flex justify-content-between align-items-center mb-4 px-3">
                     <div class="d-flex align-items-center">
                         <img src="{{ asset('icone-curso.jpg') }}" alt="Logo do Curso" class="img-fluid mr-3" style="max-width: 100px;">
-                        <h1 class="mb-0 d-none d-md-block">Bem-vindo ao Painel de Controle, {{ Auth::user()->name }}!</h1>
+                        <h1 class="mb-0 d-none d-md-block">Bem-vindo, {{ Auth::user()->name }}!</h1>
                     </div>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
