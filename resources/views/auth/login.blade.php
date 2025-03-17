@@ -8,6 +8,11 @@
     <body class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
+
+                <div class="text-center mb-4">
+                    <img src="{{ asset('icone-curso.jpg') }}" alt="Logo do Curso" class="img-fluid" style="max-width: 150px;">
+                </div>
+
                 <h1 class="text-center mb-4">Login</h1>
 
                 @if ($errors->any())

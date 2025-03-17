@@ -14,16 +14,16 @@ class AuthController extends Controller
         return view('auth.login');
     }
 
-    public function login(Request $request)
-    {
-        $credentials = $request->only('email', 'password');
+        public function login(Request $request)
+        {
+            $credentials = $request->only('email', 'password');
 
-        if (Auth::attempt($credentials)) {
-            return redirect()->intended('/dashboard'); // Redirecionar para o dashboard após o login
+            if (Auth::attempt($credentials)) {
+                return redirect()->intended('/dashboard'); // Redirecionar para o dashboard após o login
+            }
+
+            return back()->withErrors(['message' => 'Usuario e/ou senha inválidos.']);
         }
-
-        return back()->withErrors(['message' => 'Usuario e/ou senha inválidos.']);
-    }
 
     public function showRegistrationForm()
     {
